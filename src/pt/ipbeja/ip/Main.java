@@ -65,9 +65,10 @@ public class Main {
         System.out.println("| 6-> Remover Serviços              |");
         System.out.println("| 7-> Ver serviços por area         |");
         System.out.println("| 8-> Ver serviços por utentes      |");
-        System.out.println("| 9 -> Exit                         |");
+        System.out.println("| 0-> Log out                       |");
+        System.out.println("| 999-> Close app                   |");
         System.out.println("+-----------------------------------+");
-        System.out.print("Your Choice => ");
+        System.out.print("Opcao => ");
     }
 
     /**
@@ -85,9 +86,10 @@ public class Main {
         System.out.println("| 5-> Alterar apoio a um utente                    |");
         System.out.println("| 6-> Remover apoio a um utente                    |");
         System.out.println("| 7-> pesquisa dos serviços associados aos utentes |");
-        System.out.println("| 8 -> Exit                                       |");
+        System.out.println("| 0-> Log out                                      |");
+        System.out.println("| 999-> Close app                                  |");
         System.out.println("+--------------------------------------------------+");
-        System.out.print("Your Choice => ");
+        System.out.print("Opcao => ");
     }
 
     /**
@@ -100,9 +102,10 @@ public class Main {
         System.out.println("+----------------------------------+");
         System.out.println("| 1-> Marcar Serviço como prestado |");
         System.out.println("| 2-> Estado dos serviços          |");
-        System.out.println("| 3-> Exit                         |");
+        System.out.println("| 0-> Log out                      |");
+        System.out.println("| 999-> Close app                  |");
         System.out.println("+----------------------------------+");
-        System.out.print("Your Choice => ");
+        System.out.print("Opcao => ");
     }
 
     /**
@@ -141,17 +144,18 @@ public class Main {
                 case 8:
                     servicosUtente();
                     break;
-                case 9:
-                    System.out.println("Exit");
+                case 0:
+                    start();
+                case 999:
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Please choose a number between 1 and 9.");
+                    System.out.println("Please choose a number between 1 and 8.");
             }
             System.out.print("Go back to the menu? (y/n)");
             ans = scanner.next();
             if (ans.equals("n")) {
-                System.exit(0);
+                login();
             }
         } while (ans.equals("y"));
     }
@@ -189,17 +193,19 @@ public class Main {
                 case 7:
                     servicosUtentes();
                     break;
-                case 8:
-                    System.out.println("Exit");
+                case 0:
+                    start();
+                    break;
+                case 999:
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Please choose a number between 1 and 8.");
+                    System.out.println("Please choose a number between 1 and 7.");
             }
             System.out.print("Go back to the menu? (y/n)");
             ans = scanner.next();
             if (ans.equals("n")) {
-                System.exit(0);
+                login();
             }
         } while (ans.equals("y"));
     }
@@ -222,17 +228,20 @@ public class Main {
                 case 2:
                     servicoAgendado();
                     break;
-                case 3:
+                case 0:
                     System.out.println("Exit");
+                    start();
+                    break;
+                case 999:
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Please choose a number between 1 and 3.");
+                    System.out.println("Please choose a number between 1 and 2.");
             }
             System.out.print("Go back to the menu? (y/n)");
             ans = scanner.next();
             if (ans.equals("n")) {
-                System.exit(0);
+                login();
             }
         } while (ans.equals("y"));
     }
@@ -244,7 +253,6 @@ public class Main {
         for (int i = 0; i < 12; i++)
             System.out.println();
     }
-
     /**
      * this method is for login
      */
