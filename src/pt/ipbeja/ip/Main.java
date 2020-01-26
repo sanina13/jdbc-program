@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * caritas software
- * @author Miguel Coutinho and Tiago Sanina
+ * @author Tiago Sanina
  * @version 13/01/2019
  */
 public class Main {
